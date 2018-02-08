@@ -288,7 +288,11 @@ padding-bottom: 4em;
 	height: 50vh;
 }
 .projects > * {
-	background: #666;;
+	background: #666;
+}
+
+.projects article {
+	transition: all .5s ease-in-out;
 }
 .projects article:hover {
 	background: magenta;
@@ -362,7 +366,7 @@ padding-bottom: 4em;
 	text-decoration: none;
 	text-transform: uppercase;
 	text-shadow:4px 4px 0 rgba(0,0,0,0.1);
-	transition: all .25s ease-out;
+	transition: all .5s ease-out;
 }
 
 .project-link:hover,
