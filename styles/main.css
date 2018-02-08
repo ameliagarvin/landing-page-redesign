@@ -1,0 +1,499 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end of reset */
+/* start of box sizing */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* end of box sizing */
+body {
+	font-family: 'Nunito', sans-serif;
+	background: #666;
+	color: #fff;
+	max-width: 1920px;
+}
+/* main Styles */
+
+main {
+	position: relative;
+	top: 10%;
+	padding: 0;
+}
+/* Header Styles */
+header {
+	background: #333;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+}
+
+.menu ul {
+	display: none;
+}
+
+.menu ul.active {
+	display: none;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 5%;
+	height:40vh;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+	z-index: 100;
+	background: rgba(0,0,0,0.8);
+  }
+
+.menu li {
+flex: 0 0 calc(100% / 4);
+}
+
+
+.menu a {
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	line-height: 40px;
+  	font-weight: bold;
+ 	 letter-spacing: 4px;
+	text-transform: uppercase;
+	text-shadow:4px 4px 0 rgba(0,0,0,0.1);
+ }
+
+.menu a:hover:nth-child(even),
+.menu a:focus:nth-child(even),
+.menu a:active:nth-child(even) {
+	 color: #000;
+	 background-color: yellow;
+ }
+
+ 
+
+ .menu a:hover:nth-child(odd),
+ .menu a:focus:nth-child(odd),
+ .menu a:active:nth-child(odd) {
+	 color: #FFF;
+	 background-color: #6b00fe;
+ }
+
+ /* about Styles */
+
+ .about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1em;
+	background: salmon;
+	height: 80vh;
+	color: #333;
+	font-size: 1.5rem;
+	text-align: center;
+ }
+
+ .about h1 {
+	 font-size: 2rem;
+	 letter-spacing: 2px;
+	 text-shadow:4px 4px 0 rgba(0,0,0,0.1);
+ }
+
+ .about h2 {
+	 color: slateblue;
+	 margin-top: .5em;
+ }
+
+ .idea {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	justify-content: center;
+ }
+ 
+ /* contact section Styles */
+
+ .contact {
+	width: 100%;
+	background: slateblue;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact h1 {
+	font-size: 1.5rem;
+	margin-bottom:.5em;
+}
+
+.email a {
+	color: #333;
+	text-decoration: none;
+	font-size: 1.25rem;
+}
+.social-media-links {
+	width: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: .75em;
+	margin-bottom: 2rem;
+	justify-content: space-around;
+}
+.social-media-links li {
+	flex: 1 0 33%;
+	margin-bottom: 1.5em;
+}
+.social-media-links a {
+	color: #FFF;
+	font-size: 2.5rem;
+	transition: all .25s ease-out;
+}
+
+.social-media-links a:hover,
+.social-media-links a:active,
+.social-media-links a:focus {
+	color: #333;
+}
+
+.email a {
+	color: #fff;
+	text-shadow:4px 4px 0 rgba(0,0,0,0.1);
+}
+
+/* tools section */
+
+.tools {
+	padding-top: 1em;
+	background: yellow;
+	color: #333;
+	text-align: center;
+	line-height: 1.5em;
+}
+
+.tools h1 {
+font-size: 2rem;
+margin-bottom: .5em;
+}
+
+.toolbox {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 1em;
+	background: #FFf;
+	padding-top: 1em;
+}
+
+.toolbox li {
+	flex: 1 0 25%;
+	margin-bottom: 1em;
+}
+.toolbox img {
+width: 50%;
+}
+
+/* community div */
+
+.community {
+background: #fff;
+padding-bottom: 4em;
+}
+
+.community h1 {
+	background: yellow;
+	padding: 1em;
+}
+
+.community p {
+	width: 80%;
+	margin: 0 auto;
+}
+.community img {
+	margin-top: 2em;
+	max-width: 60%;
+}
+
+/* Projects section */
+
+.projects {
+	background: chartreuse;
+	width: 100%;
+	text-align: center;
+	line-height: 1.5em;
+	padding-top: 2em;
+}
+/* projects section */
+.project-container {
+	display: flex;
+	flex-direction: column;
+}
+.project-container > * {
+	flex: 0 0 100%;
+	height: 50vh;
+}
+.projects > * {
+	background: #666;;
+}
+.projects article:hover {
+	background: magenta;
+}
+.projects h1 {
+	font-size: 1.5rem;
+	padding: 1em;
+}
+.projects h3 {
+	font-size: 2rem;
+	line-height: 1.25em;
+	background: #333;
+	padding: 2em;
+}
+
+.illustration-banner {
+	width: 100%;
+	height: 50vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../assets/this-could-be-you.jpg');
+	background-attachment: fixed;
+}
+
+.design-banner {
+	width: 100%;
+	height: 50vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../assets/Logo design Red Academy.png');
+	background-attachment: fixed;
+	background-color: #333;
+}
+
+/* back to top section */
+
+.backtotop {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: teal;
+	height: 20vh;
+}
+
+.backtotop a {
+	font-size: 3rem;
+	color: darkorange;
+}
+
+/* banner section */
+
+.banner-passion {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("../assets/impact-scholarship.png");
+	background-attachment: fixed;
+	background-size: contain;
+	width: 100%;
+	height: 60vh;
+}
+
+.project-link,
+.banner-passion a {
+	padding: 1em;
+	border: 1px solid darkorange;
+	letter-spacing: 2px;
+	background: #333;
+	border-radius: 2%;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow:4px 4px 0 rgba(0,0,0,0.1);
+	transition: all .25s ease-out;
+}
+
+.project-link:hover,
+.project-link:active,
+.project-link:focus,
+.banner-passion a:hover,
+.banner-passion a:focus,
+.banner-passion a:active {
+	background: #6b00fe;
+	border:none;
+}
+
+/* Start of Media queries */
+
+ @media only screen and (min-width: 600px) {
+/* main Styles */
+
+main {
+	width: 80%;
+	margin-left: auto;
+}
+
+	/* header Styles */
+header {
+	width: 20%;
+	background: coral;
+}
+menu.active {
+	display: none;
+}
+.menu ul {
+	display: flex;
+	flex-direction: column;
+    width: 100%;
+    top: 0;
+    height: 100vh;
+	justify-content: space-around;
+	background: transparent;
+}
+
+a.toggle-nav {
+	display: none;
+}
+
+/* about section */
+
+.about {
+	background: cornflowerblue;
+	height: 100vh;
+	background-position: center;
+    background-size: cover;
+    background-image: url(../assets/amelia-banner-simple.svg);
+    background-repeat: no-repeat;
+}
+
+
+.about h1 {
+	color: #333;
+	font-size: 3rem;
+	letter-spacing: 2px;
+	margin: 7em 0 .75em 0;
+}
+
+.about h2 {
+	color: slateblue;
+	font-size:2rem;
+	text-shadow: none;
+	margin-bottom:.5rem;
+}
+
+/* contact section */
+.contact {
+	height: 60vh;
+	background: teal;
+}
+.social-media-links {
+	width: 100%;
+	height: 3rem;
+	justify-content: space-around;
+	margin: 3em 0;
+}
+.social-media-links li {
+	flex: inherit;
+}
+.social-media-links a:hover,
+.social-media-links a:active,
+.social-media-links a:focus {
+	color: hotpink;
+	font-size: 4rem;
+	text-decoration: underline;
+}
+
+/* tools section */
+
+.tools {
+	padding-top: 2em;
+	line-height: 1.5em;
+}
+
+.tools h2 {
+font-size: 1rem;
+width: 50%;
+font-weight: bold;
+margin: 3rem auto;
+padding-bottom: 1rem;
+}
+.toolbox img {
+	width: 25%;
+	}
+.community p {
+	width: 50%;
+	font-weight: bold;
+	margin: 3em auto;
+}
+/* projects section */
+.project-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+.project-container > * {
+	flex: 0 0 50%;
+	height: 50vh;
+}
+.projects h1 {
+	font-size: 2rem;
+	padding: 1em;
+}
+
+
+.scholarship a {
+	margin: 3em 2em;
+}
+
+}
